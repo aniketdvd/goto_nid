@@ -1,0 +1,7 @@
+goto_nid.form:
+  path: '/goto-nid'
+  defaults:
+    _title: 'Go to Node ID'
+    _form: '\Drupal\goto_nid\Form\formsource'
+  requirements:
+    _permission: 'access content'
