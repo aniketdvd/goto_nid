@@ -8,7 +8,7 @@ Install the module as usual, enable it.
 Place the block in any suitable region, say sidebar(this is perfect place for this block)
 
 ## Dependencies/Requirements: 
-There are no dependencies or requiremnt for this simple Drupal 8 module.
+There are no such dependencies or requirements for this simple Drupal 8 module.
 
 ## Features:
 Validation is provided for invalid node numbers.
