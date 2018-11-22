@@ -28,7 +28,6 @@ class form_source extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state){
     $form['inp_nid'] = [
-      '#prefix' => '<div class="container-body"><div class="topr">GOTO Node ID</div>',
       '#required' => TRUE,
       '#type' => 'number',
       '#title' => $this->t('Enter the Node ID'),
@@ -38,7 +37,6 @@ class form_source extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('GO TO THE NODE'),
       '#button_type' => 'primary',
-      '#suffix' => '</div>'
     ];
     return $form;
   }
