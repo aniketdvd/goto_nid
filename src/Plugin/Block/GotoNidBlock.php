@@ -26,7 +26,7 @@ class GotoNidBlock extends BlockBase{
    */
 
   public function build() {
-    $form = \Drupal::formBuilder()->getForm('Drupal\goto_nid\Form\form_source');
+    $form = \Drupal::formBuilder()->getForm('Drupal\goto_nid\Form\FormSource');
     return $form;
    }
 }

@@ -67,8 +67,3 @@ class FormSource extends FormBase {
     $redirect -> send();
   }
 }
-function goto_nid_element_info_alter(array &$types) {
-  if (isset($types['table'])) {
-    $types['table']['#attached']['library'][] = 'goto_nid/block-layout';
-  }
-}
