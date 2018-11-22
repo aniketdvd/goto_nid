@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\goto_nid\Plugin\Block\goto_nid_block.
+ * Contains \Drupal\goto_nid\Plugin\Block\GotoNidBlock.
  */
 namespace Drupal\goto_nid\Plugin\Block;
 
@@ -13,13 +13,13 @@ use Drupal\Core\Form\FormInterface;
  * Provides a 'goto node' block.
  *
  * @Block(
- *   id = "goto_nid_block",
+ *   id = "GotoNidBlock",
  *   admin_label = @Translation("goto nid block"),
  *   category = @Translation("goto node block")
  * )
  */
 
-class goto_nid_block extends BlockBase{
+class GotoNidBlock extends BlockBase{
 
   /**
    * {@inheritdoc}
