@@ -1,0 +1,4 @@
+block-layout:
+  version: 1.0
+  css:
+    css/block-layout.css: {}
