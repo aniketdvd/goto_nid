@@ -62,7 +62,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
  * Implements a node redirect block form.
  */
 
-class formsource extends FormBase {
+class form_source extends FormBase {
 
   /**
    * {@inheritdoc}
