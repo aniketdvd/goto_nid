@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
  */
 
 class FormSource extends FormBase {
-
+  
   /**
    * {@inheritdoc}
   */
@@ -26,7 +26,9 @@ class FormSource extends FormBase {
   */
 
   public function buildForm(array $form, FormStateInterface $form_state){
+    $form['#attached']['library'][] = 'goto_nid/goto_nid';
     $form['inp_nid'] = [
+      '#prefix' => '<div class = "container-body">',
 			'#required' => TRUE,
       '#type' => 'number',
       '#title' => $this->t('Enter the Node ID'),
