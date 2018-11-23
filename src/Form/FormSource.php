@@ -28,7 +28,7 @@ class FormSource extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state){
     $form['inp_nid'] = [
-			'#prefix' => '<div class = "container-body">',
+			'#theme' => 'goto_nid_theme',
       '#required' => TRUE,
       '#type' => 'number',
       '#title' => $this->t('Enter the Node ID'),

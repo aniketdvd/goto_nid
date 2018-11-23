@@ -1,5 +1,4 @@
-block-layout:
-  version: 1.0
+goto_nid:
   css:
     theme:
-      css/block-layout.css: {}
+      css/block.css: {}
