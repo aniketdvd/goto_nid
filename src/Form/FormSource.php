@@ -28,6 +28,7 @@ class FormSource extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state){
     $form['inp_nid'] = [
+			'#prefix' => '<div class = "container-body">',
       '#required' => TRUE,
       '#type' => 'number',
       '#title' => $this->t('Enter the Node ID'),
@@ -66,4 +67,9 @@ class FormSource extends FormBase {
     $redirect=new RedirectResponse($url);
     $redirect -> send();
   }
+}
+function goto_nid_element_info_alter(array &$types) {
+  	if (isset($types['container-body'])) {
+    	$types['container-body']['#attached']['library'][] = 'goto_nid/block-layout';
+  	}
 }

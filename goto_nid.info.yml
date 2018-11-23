@@ -3,3 +3,5 @@ description: this module redirects the user to the node id user wishes
 package: nodetools
 type: module
 core: 8.x
+libraries:
+  - goto-nid/block-layout
