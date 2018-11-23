@@ -7,7 +7,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-
 /**
  * Implements a node redirect block form.
  */
@@ -28,8 +27,7 @@ class FormSource extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state){
     $form['inp_nid'] = [
-			'#theme' => 'goto_nid_theme',
-      '#required' => TRUE,
+			'#required' => TRUE,
       '#type' => 'number',
       '#title' => $this->t('Enter the Node ID'),
     ];
@@ -67,9 +65,4 @@ class FormSource extends FormBase {
     $redirect=new RedirectResponse($url);
     $redirect -> send();
   }
-}
-function goto_nid_element_info_alter(array &$types) {
-  	if (isset($types['container-body'])) {
-    	$types['container-body']['#attached']['library'][] = 'goto_nid/block-layout';
-  	}
 }
