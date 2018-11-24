@@ -25,8 +25,7 @@ class FormSource extends FormBase {
    * {@inheritdoc}
   */
 
-  public function buildForm(array $form, FormStateInterface $form_state){
-    $form['#attached']['library'][] = 'goto_nid/goto_nid';
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $form['inp_nid'] = [
       '#prefix' => '<div class = "container-body">',
 			'#required' => TRUE,
@@ -39,6 +38,7 @@ class FormSource extends FormBase {
       '#value' => $this->t('GO TO THE NODE'),
       '#button_type' => 'primary',
     ];
+    $form['#attached']['library'][] = 'goto_nid/goto_nid';
     return $form;
   }
 
@@ -46,11 +46,11 @@ class FormSource extends FormBase {
    * {@inheritdoc}
   **/
 
-  public function validateForm(array &$form, FormStateInterface $form_state){
-    if($form_state -> getValue('inp_nid')<1){
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    if($form_state -> getValue('inp_nid')<1) {
       $form_state -> setErrorByName('inp_nid', $this->t('Sorry, invalid node. Use only numbers that are greater 1'));
     }
-    if(!(is_numeric($form_state -> getValue('inp_nid')))){
+    if(!(is_numeric($form_state -> getValue('inp_nid')))) {
       $form_state -> setErrorByName('inp_nid', $this->t('Sorry, invalid node. Use only numbers that are greater 1'));
     }
   }
@@ -59,7 +59,7 @@ class FormSource extends FormBase {
    * {@inheritdoc}
   **/
 
-  public function submitForm(array &$form, FormStateInterface $form_state){
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     $nid = $form_state->getValue('inp_nid');
     $routeName = 'entity.node.canonical';
     $routeParameters = ['node' => $nid];
